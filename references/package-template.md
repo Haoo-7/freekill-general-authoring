@@ -1,6 +1,6 @@
 # 最小可用三文件骨架
 
-把 `<包名>` / `<子包>` / `前缀` / 代码名替换成自己的。UTF-8 无 BOM、2 空格缩进、文件尾留空行。
+回链：[SKILL.md §4 创建拓展结构](../SKILL.md)。把 `<包名>` / `<子包>` / `<前缀>` / 代码名替换成自己的。UTF-8 无 BOM、2 空格缩进、LF 换行、文件尾留空行。
 
 ## 1. `packages/<包名>/init.lua`
 
@@ -18,6 +18,8 @@ return {
   <子包>,
 }
 ```
+
+入口必须 `return { ... }`。写成 `return <子包>` 时包不注册、武将不出现，日志里也看不出原因。
 
 ## 2. `packages/<包名>/pkg/<子包>/init.lua`
 
@@ -118,3 +120,19 @@ skill:addEffect(fk.Damaged, {
 ```lua
 General:new(extension, "<前缀>__<真名>", "god", 5):addSkills { "wushuang", "<前缀>__<技能名>" }
 ```
+
+## 写自测（可选）
+
+```lua
+skill:addTest(function(room, me)
+  FkTest.RunAddSkills(me, skill.name)
+  local spec = table.find(skill.effect_spec_list, function(item)
+    return item[1] == fk.DrawNCards
+  end)
+  lu.assertTrue(type(spec[3].on_use) == "function")
+end)
+```
+
+`skill.effect_spec_list` 每项是 `{key, attribute, spec}`（`skill_skeleton.lua:154/156`）。**`[1]` 是第一个 `addEffect` 调用，不是想要的那个效果**：先 `prohibit` 后 `active` 的技能取 `effect_spec_list[1][3].can_use` 得到 `nil`，测试在 `nil` 上调用直接报错。按第一个元素（key）筛出目标效果，不要按序号硬取。`lu.assertTrue` / `lu.assertFalse` 可用（`standard_cards\pkg\skills\nioh_shield.lua`）。
+
+跑测试：在游戏根目录 `& '.\FreeKill.exe' --testskills <skill_name>`。
