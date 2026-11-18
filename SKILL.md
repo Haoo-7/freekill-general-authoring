@@ -22,7 +22,7 @@ metadata:
 | 规范、润色、审查技能描述与官方用词 | [技能描述规范与润色](references/skill-polish.md) |
 | 速查符号、时机命名、动词定义、数值公式 | [速查：用语与符号](references/速查-用语与符号.md) |
 | 查《官方规则集》规则与用语原文（权威仲裁） | [官方规则集 V2.2](references/三国杀官方规则集V2.2（规则+用语原文）.md) |
-| 查事件结算顺序与全部官方技能原文范例 | [配套卷（流程+卡牌）](references/三国杀官方规则集V1.0配套卷（流程+卡牌）.pdf) |
+| 查事件结算顺序与全部官方技能原文范例 | [配套卷（流程+卡牌）](references/三国杀官方规则集V1.0配套卷（流程+卡牌）.md) |
 | 建目录、写骨架 | [拓展骨架](references/package-template.md) |
 | 查 API 与样板文件 | [API 与样板](references/core-api-samples.md) |
 | 写技能效果的形态与坑 | [技能形态](references/skill-mechanics.md) |
