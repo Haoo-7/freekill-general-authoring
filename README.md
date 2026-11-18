@@ -35,9 +35,10 @@ npx skills add Haoo-7/freekill-general-authoring
 - “帮我做个武将，技能是……”
 - “把这张武将卡图做成可玩的武将”
 - “给现有拓展加一个新武将 / 改原画语音”
+- “帮我把技能描述按官方规则集润色 / 审查歧义”
 - “帮我验收这个包，看看为什么技能没触发”
 
-**不会**触发：修改 FreeKill 本体或官方包源码、无名杀等其他引擎的拓展、纯规则咨询、联机故障排查。
+**不会**触发：修改 FreeKill 本体或官方包源码、无名杀等其他引擎的拓展、与描述撰写无关的纯规则咨询、联机故障排查。
 
 ## 配置
 
@@ -60,9 +61,13 @@ python -m unittest discover -s tests
 SKILL.md                            # 主流程：11 个步骤，每步有完成标准
 references/package-template.md      # 三文件骨架：触发技/主动技/借用技能/自测
 references/core-api-samples.md      # 0.5.25 实测的 API 索引与样板文件
-references/skill-mechanics.md       # 技能形态与坑：钩子粒度、失效技、标记、统计口径
-references/viewas-and-areas.md      # 视为技、从隐藏区用牌、区域废除
-references/text-and-assets.md       # 翻译键、文案规则、原画与语音
+references/skill-mechanics.md                           # 技能形态与坑：钩子粒度、失效技、标记、统计口径
+references/viewas-and-areas.md                          # 视为技、从隐藏区用牌、区域废除
+references/skill-polish.md                              # 技能描述起草/润色/审查全流程（六要素/13条官方模板/自查清单）
+references/速查-用语与符号.md                            # 符号系统、时机命名、操作动词精确定义、数值公式、易错点
+references/三国杀官方规则集V2.2（规则+用语原文）.md         # 《官方规则集》游戏规则 + 游戏用语全章原文（权威仲裁）
+references/三国杀官方规则集V1.0配套卷（流程+卡牌）.pdf      # 事件结算流程 + 全部官方武将技能描述范例库
+references/text-and-assets.md                           # 翻译键、文案规则、原画与语音
 references/troubleshooting.md       # 改了没生效时的排查顺序
 references/local-environment.md     # 本机环境模板（首次使用需填写）
 scripts/check_package.py            # 静态验收：结构、编码、翻译键、db hash
@@ -84,4 +89,5 @@ tests/test_check_package.py         # 脚本的回归测试
 
 ## 致谢
 
-结构按 [oil-skill-creator](https://github.com/oil-oil/oil-skill-creator) 的方法论整理与校验。
+- 结构按 [oil-skill-creator](https://github.com/oil-oil/oil-skill-creator) 的方法论整理与校验
+- 技能描述润色全流程与规则依据整合自 [sgs-skill-polish](https://github.com/Haoo-7/sgs-skill-polish)（规则集文本源自社区整理的 [sgsrule](https://github.com/zz412000428/sgsrule) 项目与配套卷，仅作参考依据使用）
