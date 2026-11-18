@@ -66,7 +66,7 @@ references/viewas-and-areas.md                          # 视为技、从隐藏�
 references/skill-polish.md                              # 技能描述起草/润色/审查全流程（六要素/13条官方模板/自查清单）
 references/速查-用语与符号.md                            # 符号系统、时机命名、操作动词精确定义、数值公式、易错点
 references/三国杀官方规则集V2.2（规则+用语原文）.md         # 《官方规则集》游戏规则 + 游戏用语全章原文（权威仲裁）
-references/三国杀官方规则集V1.0配套卷（流程+卡牌）.pdf      # 事件结算流程 + 全部官方武将技能描述范例库
+references/三国杀官方规则集V1.0配套卷（流程+卡牌）.md       # 事件结算流程 + 全部官方武将技能描述范例库
 references/text-and-assets.md                           # 翻译键、文案规则、原画与语音
 references/troubleshooting.md       # 改了没生效时的排查顺序
 references/local-environment.md     # 本机环境模板（首次使用需填写）
