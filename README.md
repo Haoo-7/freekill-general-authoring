@@ -62,6 +62,7 @@ references/package-template.md      # 三文件骨架：触发技/主动技/借�
 references/core-api-samples.md      # 0.5.25 实测的 API 索引与样板文件
 references/skill-mechanics.md       # 技能形态与坑：钩子粒度、失效技、标记、统计口径
 references/viewas-and-areas.md      # 视为技、从隐藏区用牌、区域废除
+references/skill-wording.md         # 技能用词规范：符号、时机、操作动词、白话转规范对照
 references/text-and-assets.md       # 翻译键、文案规则、原画与语音
 references/troubleshooting.md       # 改了没生效时的排查顺序
 references/local-environment.md     # 本机环境模板（首次使用需填写）
@@ -84,4 +85,5 @@ tests/test_check_package.py         # 脚本的回归测试
 
 ## 致谢
 
-结构按 [oil-skill-creator](https://github.com/oil-oil/oil-skill-creator) 的方法论整理与校验。
+- 结构按 [oil-skill-creator](https://github.com/oil-oil/oil-skill-creator) 的方法论整理与校验
+- 技能描述用词规范提炼自 [sgs-skill-polish](https://github.com/Haoo-7/sgs-skill-polish)
